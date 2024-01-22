@@ -151,7 +151,7 @@ function SignIn() {
         // ...
       });
   }
-  return <button onClick={signInWithGoogle}>請登錄您的Google帳號</button>;
+  return <button onClick={signInWithGoogle}>請登入您的Google帳號</button>;
 }
 
 function SignOut() {
