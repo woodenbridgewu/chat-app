@@ -90,7 +90,7 @@ button {
   background-color: #2a2d36;
   border: none;
   color: #ffffff;
-  padding: 15px 32px;
+  padding: 12px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -100,7 +100,7 @@ button {
 }
 
 button:hover {
-  background-color: #27272b;
+  background-color: #3d3d47;
 }
 
 button:disabled {
@@ -147,10 +147,14 @@ p {
   color: #ffffff;
   background: #007bff;
   align-self: flex-end;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-align: left;
 }
 .received p {
   background: #e5e5ea;
   color: #333333;
+  text-align: left;
 }
 
 img {
