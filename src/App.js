@@ -50,13 +50,17 @@ function ChatRoom() {
   useEffect(() => {
     // return unsubscribe 函数，以便在component卸載時取消監聽
     const unsubscribe = onSnapshot(
-      query(collection(firestore, "messages"), orderBy("createdAt"), limit(25)),
+      query(
+        collection(firestore, "messages"),
+        orderBy("createdAt", "desc"),
+        limit(25)
+      ),
       (querySnapshot) => {
         const newARR = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-        setARR(() => [...newARR]);
+        setARR(() => [...newARR.reverse()]);
       },
       (error) => {
         console.error("Error fetching messages:", error);
